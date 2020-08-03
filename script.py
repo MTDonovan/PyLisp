@@ -12,9 +12,17 @@ def pipe(value, *args, **kwargs):
     return value
 
 def add(arg, value):
-    return arg / value
+    return arg + value
 
-(pipe
- (100,
-  (par (add, 10)),
-  (print)))
+# (pipe
+#  (100,
+#   (par (add, 10)),
+#   (print)))
+
+(print
+ (pipe
+  (100,
+   (par (add, 10)),
+   (lambda x: x / 2)
+  )
+ ))
