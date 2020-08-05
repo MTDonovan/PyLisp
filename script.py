@@ -2,7 +2,7 @@ from functools import partial, reduce
 # from inspect import signature as sig
 
 
-def pipe(value, *args, **kwargs):
+def thread(value, *args, **kwargs):
     for expr in list(args):
         if isinstance(expr, tuple) or isinstance(expr, list):
             if expr[0] in ("+", "-", "*", "/"):
@@ -14,13 +14,13 @@ def pipe(value, *args, **kwargs):
     return value
 
 
-(pipe
+(thread
  (100,
   ('+', 2, 2, 2),
   (print)))
 
 (print
- (pipe
+ (thread
   (100,
    ('+', 10),
    (lambda x: x / 2))))
