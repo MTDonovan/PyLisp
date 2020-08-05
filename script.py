@@ -1,5 +1,5 @@
-from inspect import signature as sig
 from functools import partial, reduce
+# from inspect import signature as sig
 
 
 def pipe(value, *args, **kwargs):
