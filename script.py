@@ -10,7 +10,6 @@ from functools import partial
 def pipe(value, *args, **kwargs):
     for expr in list(args):
         if isinstance(expr, tuple) or isinstance(expr, list):
-            # value = partial(value)(*expr)
             value = partial(expr[0], value)(*expr[1:])
         else:
             value = expr(value)
