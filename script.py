@@ -29,3 +29,12 @@ def add(*args):
   (100,
    (add, 10),
    (lambda x: x / 2))))
+
+var = (pipe
+       (1,
+        (add, 10, 20, 30),
+        (add, 10, 20, 30)))
+
+(pipe
+ (var,
+  (print)))
