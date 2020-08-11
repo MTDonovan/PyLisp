@@ -24,23 +24,8 @@ def pipe(value, *args, **kwargs):
             value = expr(value)
     return value
 
-
-(pipe
- (100,
-  ('+', 2, 2, 2),
-  (print)
- ))
-
-(print
- (pipe
-  (100,
-   ('+', 10),
-   (lambda x: x / 2.25))
- ))
-
-(pipe
- (100,
-  ('/', 2),
-  ('+', 100),
-  (print)
- ))
+# (pipe
+#  (100,
+#   ('/', 2),
+#   ('+', 100),
+#   (print)))
