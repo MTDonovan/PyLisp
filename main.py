@@ -2,7 +2,13 @@ import operator as op
 from functools import partial, reduce
 
 
-def pipe(value, *args, **kwargs):
+def thread(value, *args, **kwargs):
+    '''
+    The "thread" function is a basic implementation of the threading
+    macro from Lisp.
+    Using the "opetator" module, developers can execute "Reverse Polish
+    notation (RPN)" functions within the context of a "thread" function.
+    '''
     ops = {
         '+': op.add,
         '-': op.sub,
@@ -24,25 +30,24 @@ def pipe(value, *args, **kwargs):
             value = expr(value)
     return value
 
-(pipe
+(thread
  ('TEST',
   (lambda x: x.lower()),
   (print)))
 
-# (pipe
-#  (100,
-#   ('+', 2, 2, 2),
-#   (print)))
-#
-# (print
-#  (pipe
-#   (100,
-#    ('+', 10),
-#    (lambda x: x / 2.25))))
-#
-#
-# (pipe
-#  (100,
-#   ('/', 2),
-#   ('+', 100),
-#   (print)))
+(thread
+ (100,
+  ('+', 2, 2, 2),
+  (print)))
+
+(print
+ (thread
+  (100,
+   ('+', 10),
+   (lambda x: x / 2.25))))
+
+(thread
+ (100,
+  ('/', 2),
+  ('+', 100),
+  (print)))
