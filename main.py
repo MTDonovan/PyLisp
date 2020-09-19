@@ -29,25 +29,3 @@ def thread(value, *args, **kwargs):
         else:
             value = expr(value)
     return value
-
-(thread
- ('TEST',
-  (lambda x: x.lower()),
-  (print)))
-
-(thread
- (100,
-  ('+', 2, 2, 2),
-  (print)))
-
-(print
- (thread
-  (100,
-   ('+', 10),
-   (lambda x: x / 2.25))))
-
-(thread
- (100,
-  ('/', 2),
-  ('+', 100),
-  (print)))
