@@ -6,8 +6,6 @@ def thread(value, *args, **kwargs):
     '''
     The "thread" function is a basic implementation of the threading
     macro from Lisp.
-    Using the "operator" library, developers can execute "Reverse Polish
-    notation (RPN)" functions within the context of a "thread" function.
     '''
     ops = {
         '+': op.add,
