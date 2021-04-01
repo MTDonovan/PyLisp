@@ -4,8 +4,7 @@ from functools import partial, reduce
 
 def thread(value, *args, **kwargs):
     '''
-    The "thread" function is a basic implementation of the threading
-    macro from Lisp.
+    The "thread" function is a basic implementation of the threading macro from Lisp.
     '''
     ops = {
         '+': op.add,
