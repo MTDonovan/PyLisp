@@ -12,7 +12,7 @@
  (thread
   (100,
    (lambda x: x / 2.25),
-   (lambda x: round(x, 2)))))
+   (round, 2))))
 
 # Output: 44.44
 
