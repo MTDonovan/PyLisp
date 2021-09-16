@@ -6,7 +6,7 @@
   (lambda x: x.lower()),
   (print)))
 
-# Output: 'make this lower text'
+# prints 'make this lower text'
 
 (print
  (thread
@@ -14,7 +14,7 @@
    (lambda x: x / 2.25),
    (round, 2))))
 
-# Output: 44.44
+# prints 44.44
 
 (thread
  (100,
@@ -22,6 +22,5 @@
   ('+', 100.55),
   (print)))
 
-# Output: 101.59166666666667
-  
+# prints 101.59166666666667
 ```
