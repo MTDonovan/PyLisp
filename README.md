@@ -11,8 +11,8 @@ the passed value acting as the initial parameter.
 thread(100, lambda x: x / 2.25, (round, 2))
 # result: returns 44.44
 
-thread('MAKE THIS TEXT LOWER CASE', lambda x: x.lower(), print)
-# result: prints string 'make this lower text'
+thread('MAKE THIS LOWER CASE', lambda x: x.lower(), print)
+# result: prints string 'make this lower case'
 
 thread(100,
        ('/', 2, 6, 8),
